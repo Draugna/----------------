@@ -1,0 +1,33 @@
+label, input {
+  display: block;
+  min-width: 200px;
+  max-width: 200px;
+  padding-left: 100px;
+
+}
+
+label {
+  color: black;
+  font-weight: bold;
+}
+
+textarea {
+  max-width: 200px;
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 50px;
+}
+
+input[type=submit]{
+  min-width: 300px;
+  text-align: center;
+  padding-right: 100px;
+}
+
+fieldset
+{
+  background-color:#CCC;
+  max-width:200px;
+  padding: 16px;	
+}
+

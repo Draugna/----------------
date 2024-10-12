@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список задач</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <header><h1>Список Задач</h1></header>
+  <main>
+    <input type="text" id="taskInput" placeholder="Добавить новую задачу">
+    <button onclick="addTask()">Добавить задачу</button>
+    <input type="text" id="filterInput" placeholder="Фильтр задач" oninput="filterTasks()">
+      <ul id="taskList">
+          <!-- Задачи будут добавляться здесь -->
+      </ul>
+  </main>
+  
+  <footer>
+
+  </footer>
+  <script defer src="script.js"></script>
+</body>
+</html>

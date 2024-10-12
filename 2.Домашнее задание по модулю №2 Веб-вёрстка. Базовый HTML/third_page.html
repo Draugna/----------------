@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Разработка</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <header>
+    <h1>Frontend Разработка</h1>
+    <nav>
+      <ol>
+        <li><a href="/index.html">Введение</a></li>
+        <li><a href="/index.html#instruments">Инструменты</a></li>
+        <li><a href="/index.html#languages">Языки</a></li>
+        <li><a href="/second_page.html">Перейти на 2ю стрраницу</a></li>
+        <li><a href="#">Оставить комментарий</a></li>
+      </ol>
+    </nav>
+    <hr>
+  </header>
+  <main>
+    <h1>Оставьте ваш отзыв</h1>
+    <section id="leaveComment">
+      <form action="" method="get">
+        <fieldset >
+          <p>
+            <label for="userName" >Ваше имя:</label>
+            <input type="text" name="username" id="userName" placeholder="Имя пользователя">
+          </p>
+          <p>
+            <label for="familyName">Ваша Фамилия:</label>
+            <input type="text" name="familyname" id="familyName" placeholder="Фамилия пользователя">
+          </p>
+          <p>
+            <label for="userMail">Ваша почта:</label>
+            <input type="email" name="user_mail" id="userMail"  placeholder="Введите почту">
+          </p>
+          <p>
+            <label for="dateOfBirth">Дата рождения:</label>
+            <input type="date" name="birthDate" id="dateOfBirth" >
+          </p>
+          <p>
+            <label for="yif">Кол-во лет в Frontend:</label>
+            <input type="number" name="yearsInFrontend" id="yif" placeholder="Кол-во лет в Frontend">
+          </p>
+          <p>
+            <label for="">Ваш Комментарий:</label>
+            <textarea name="comment" id="commentText"></textarea>
+          </p>
+          <p>
+            <input type="submit" value=" Отправить отзыв">
+          </p>
+          
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <hr>
+    <nav>
+      <p>Полезная информация:</p>
+      <a href="/index.html#vvedenie">Введение в Frontend Разработку</a>
+      <br>
+      <a href="/index.html#bigtable">Разница знаний Junior и Middle разработчика</a>
+    </nav>
+    <hr>
+    <p>Контактные данные:</p>
+    <address>
+      Телефон:
+      <a href="tel:+78005553535">+7 800 555 35 35</a>
+    </address>
+    <address>
+      Почта:
+      <a href="mailto:frontendinfo@mail.ru">frontendinfo@mail.ru</a>
+    </address>    
+  </footer>
+</body>
+</html>
