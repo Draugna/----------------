@@ -15,23 +15,13 @@ function loadTasks(){
     li.innerHTML = `
       <span>${task}</span>
       <div>
-      <button onclick="doneTask(this)">Выполнено</button>
+      <input type = "checkbox" class=".check"></button>
       <button onclick="editTask(this)">Редактировать</button>
       <button onclick="deleteTask(this)">Удалить</button>
       </div>
       `;
     taskList.appendChild(li);
   })
-//Подгшружаем Чекбоксы в их отмеченном состоянии
-// const check = JSON.parse(localStorage.getItem('check')) || [];
-// console.log(check)
-//   check.forEach(checkbox => {
-//     const checks = JSON.parse(localStorage.getItem('check'))
-//     for (let i = 0; i < check.length ; i++) {
-//       checkbox = checks[i];
-//     }
-      
-//   })
 }
 
 function addTask() {
@@ -45,14 +35,14 @@ if (taskText === '') return;
   li.innerHTML = `
   <span>${taskText}</span>
   <div>
-  <button onclick="doneTask(this)">Выполнено</button>
+  <input type = "checkbox" class=".check"></input>
   <button onclick="editTask(this)">Редактировать</button>
   <button onclick="deleteTask(this)">Удалить</button>
   </div>
   `
   taskList.appendChild(li);
   saveTasks();
-  saveChecks();
+
   taskInput.value = "";
 }
 
@@ -80,4 +70,11 @@ function editTask(button) {
 }
 }
 
+// function filterTasks(){
+//   const 
+// }
 
+
+// function doneTask(){
+//   const li = 
+// }
