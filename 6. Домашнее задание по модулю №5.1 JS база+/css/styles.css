@@ -14,7 +14,6 @@ input[type="text"] {
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 4px;
-  margin-right: 10px;
   margin-bottom: 5px;
   margin-left: 0%;
 }
@@ -23,7 +22,6 @@ button {
   width:82%;
   padding: 10px 20px;
   margin-bottom: 2px;
-  margin-right: 10px;
   background-color: #5F9EA0;
   color: white;
   border: none;
@@ -37,29 +35,53 @@ button:hover {
 }
 
 ul {
+  width: 83%;
+  padding: 10px 20px;
+  margin-bottom: 2px;
+  margin-right: 10px;
   list-style: none;
   padding:0;
   
 }
 
 li {
-  width: 100%;
+  width: 95%;
   background-color: #f9f9f9;
   margin-top: 10px;
   padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 10px;
-  display:flex;
+  display: flex;
   justify-content:space-around;
-  align-items: center;
+  align-items:center;
 }
 
-li.button{
-  align-content: end;
+li span {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-content:center;
+  overflow-wrap: break-word;
+}
+
+li div {
+  display: flex;
+  width: 50%;
+  justify-content:space-between;
+}
+
+li button{
+  width: 40%;
+  margin-right: 10px;
+
 }
 
 div {
-  width:83%;
+  width:82%;
   display:flex;
+  margin-left: 20px;
+  margin-right: 20px;
   justify-content: space-around;
 }
 

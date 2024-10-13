@@ -12,9 +12,11 @@ function loadTasks(){
     const li = document.createElement('li');
     li.innerHTML = `
       <span>${task}</span>
+      <div>
       <input type="checkbox"></input>
       <button onclick="editTask(this)">Редактировать</button>
       <button onclick="deleteTask(this)">Удалить</button>
+      </div>
       `;
     taskList.appendChild(li);
   })
@@ -31,9 +33,11 @@ if (taskText === '') return;
   const li = document.createElement('li');
   li.innerHTML = `
   <span>${taskText}</span>
+  <div>
   <input type="checkbox"></input>
   <button onclick="editTask(this)">Редактировать</button>
   <button onclick="deleteTask(this)">Удалить</button>
+  </div>
   `
   taskList.appendChild(li);
 
