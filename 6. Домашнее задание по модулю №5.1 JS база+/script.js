@@ -8,20 +8,21 @@ function loadTasks(){
   const name = JSON.parse(localStorage.getItem('name')) || [];
   const taskList = document.getElementById('taskList');
 
+  const check = JSON.parse(localStorage.getItem('check')) || [];
+  
 
-//Добавляем строки
-  name.forEach(task => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <span>${task}</span>
-      <div>
-      <input type = "checkbox" class=".check"></button>
-      <button onclick="editTask(this)">Редактировать</button>
-      <button onclick="deleteTask(this)">Удалить</button>
-      </div>
-      `;
-    taskList.appendChild(li);
-  })
+name.forEach(task => {
+  const li = document.createElement('li');
+  li.innerHTML = `
+    <span>${task}</span>
+    <div>
+    <input type = "checkbox"></button>
+    <button onclick="editTask(this)">Редактировать</button>
+    <button onclick="deleteTask(this)">Удалить</button>
+    </div>
+    `;
+  taskList.appendChild(li);
+})
 }
 
 function addTask() {
@@ -42,6 +43,7 @@ if (taskText === '') return;
   `
   taskList.appendChild(li);
   saveTasks();
+  saveChecks();
 
   taskInput.value = "";
 }
@@ -56,6 +58,7 @@ function deleteTask(button) {
   const li = button.parentElement.parentElement;
   li.remove();
   saveTasks();
+  saveChecks();
 }
 
 function editTask(button) {
@@ -66,15 +69,13 @@ function editTask(button) {
   if(newTaskText !== null && newTaskText.trim() !== ""){
     li.querySelector('span').textContent = newTaskText.trim();
     saveTasks();
+    saveChecks();
 
 }
 }
 
-// function filterTasks(){
-//   const 
-// }
-
-
-// function doneTask(){
-//   const li = 
-// }
+function saveChecks(){
+  const taskList = document.getElementById('taskList');
+  const check = Array.from(taskList.children).map(li => li.querySelector("input").checked);
+  localStorage.setItem('check',JSON.stringify(check))
+}
