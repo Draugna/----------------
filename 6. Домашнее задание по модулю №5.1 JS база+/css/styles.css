@@ -56,3 +56,13 @@ li {
 li.button{
   align-content: end;
 }
+
+div {
+  width:83%;
+  display:flex;
+  justify-content: space-around;
+}
+
+div.button {
+  width: 100%;
+}
