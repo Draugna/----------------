@@ -71,6 +71,17 @@ li div {
   justify-content:space-between;
 }
 
+li:has(input:checked) span {
+  text-decoration:line-through;
+}
+
+li:has(input:checked) button {
+  background-color: red;
+}
+li:has(input:checked) button:hover {
+  background-color: rgb(139, 115, 115);
+}
+
 li button{
   width: 40%;
   margin-right: 10px;
