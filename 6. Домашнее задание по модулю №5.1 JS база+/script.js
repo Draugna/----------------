@@ -88,3 +88,25 @@ function saveChecks() {
   const check = Array.from(taskList.children).map(li => li.querySelector("input").checked);
   localStorage.setItem('check', JSON.stringify(check));
 }
+
+function showCompleted(){
+  const check = JSON.parse(localStorage.getItem('check')) || [];
+  const li = document.getElementsByTagName("li");
+
+    for (let i = 0; i < check.length; i++) {
+      if(check[i] !== true)
+      {
+        li[i].style.display = 'none'
+      }    
+}}
+
+function showCompleted(){
+  const check = JSON.parse(localStorage.getItem('check')) || [];
+  const li = document.getElementsByTagName("li");
+
+    for (let i = 0; i < check.length; i++) {
+      if(check[i] !== true)
+      {
+        li[i].style.display = 'none'
+      }    
+}}
