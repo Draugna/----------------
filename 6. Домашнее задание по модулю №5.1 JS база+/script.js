@@ -33,7 +33,7 @@ function loadTasks() {
 function addTask() {
   const taskInput = document.getElementById('taskInput');
   const taskText = taskInput.value.trim();
-
+  showAllTask();
   if (taskText === '') return;
 
   const taskList = document.getElementById('taskList');
