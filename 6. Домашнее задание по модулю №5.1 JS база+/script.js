@@ -102,8 +102,6 @@ function showCompleted(){
       
 }}
 
-
-
 function showInProgress(){
   const check = JSON.parse(localStorage.getItem('check')) || [];
   const li = document.getElementsByTagName("li");
