@@ -92,22 +92,35 @@ function saveChecks() {
 function showCompleted(){
   const check = JSON.parse(localStorage.getItem('check')) || [];
   const li = document.getElementsByTagName("li");
+  showAllTask();
 
     for (let i = 0; i < check.length; i++) {
       if(check[i] !== true)
       {
         li[i].style.display = 'none'
       }    
+      
 }}
 
-function showCompleted(){
+
+
+function showInProgress(){
   const check = JSON.parse(localStorage.getItem('check')) || [];
   const li = document.getElementsByTagName("li");
+  showAllTask();
 
     for (let i = 0; i < check.length; i++) {
-      if(check[i] !== true)
+      if(check[i] === true)
       {
         li[i].style.display = 'none'
-      }    
+      }   
 }}
 
+function showAllTask(){
+  const li = document.getElementsByTagName("li");
+  const name = JSON.parse(localStorage.getItem('name')) || [];
+
+  for (let i = 0; i < name.length; i++) {
+      li[i].style.display = 'flex'
+    }   
+  }
